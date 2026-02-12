@@ -231,7 +231,7 @@ button:hover {
   background-image: url("images/loveImage.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   min-height: 100vh;
 }
 
@@ -279,3 +279,4 @@ background:linear-gradient(135deg, #f7c4d9, #e1d2ba, #ffd9e4)  ;min-height: 100v
     transform: scale(1);
   }
 }
+
