@@ -1,13 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>My Love
-</title>
+<meta charset="UTF-8">
+<title>Our Story 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script type="text/javascript" src="script.js"></script>
+
 
 </head>
+
 <body>
-<h1>Happy Valentines day</h1>
-<img src="images/w3.jpg" alt="w3">
+
+<!-- 🎵 MUSIC -->
+<audio id="loveMusic" loop>
+  <source src="images/vizhiyil_song.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="successSound" loop>
+  <source src="images/hug_song.mp3" type="audio/mpeg">
+</audio>
+
+<!-- WELCOME -->
+<div id="welcomePage" class="page visible">
+  <div class="pageHeading">
+   <h1 class="pageHeadingTxt">A Little Journey Through Our Love 💌</h1>
+  </div>
+  <div class="card">
+    <h1>Hey Dear ❤️</h1>
+    <p class="about">Let’s go back to where it all began…💕 </p>
+    <button style="margin-top: 20px;" onclick="start()">Relive</button>
+  </div>
+</div>
+
+<!-- QUESTION -->
+<div id="questionPage" class="page hidden">
+  <div class="card">
+    <h2 id="questionText"></h2>
+    <input id="answerInput" />
+    <button onclick="check()">Unlock</button>
+    <p id="errorMsg" class="msg"></p>
+    <p id="hintContainer" class="msg" style="color:#d81b60; font-style:italic;"></p>
+
+  </div>
+</div>
+
+<!-- HUG -->
+<div id="hugPage" class="page hidden">
+  <div class="hug-wrapper">
+   <img id="hugImage"
+     src="https://media.giphy.com/media/od5H3PmEG5EVq/giphy.gif"
+     alt="Teddy Hug">
+  </div>
+  <div class="hug-bottom">
+    <div id="hugText"></div>
+      <button id="hugBtn" onclick="next()">Next ➝</button>  </div>
+</div>
+
+<!-- FINAL -->
+<div id="finalPage" class="page hidden">
+  <div class="final-container">
+    <div class="final-image">
+      <img src="images/love.jpg" alt="Couple">
+    </div>
+  <div class="final-letter">
+      My love,<br><br>
+    Time passes.<br>
+    Life changes.<br>
+We grow.<br>
+
+But the way you love me,<br>
+and the way we build this life together,<br>
+will always be my safest place.<br><br>
+
+Thank you for being my partner…<br>
+and the best father to our son. 💛<br><br>
+      Happy Valentine’s Day 💕
+    </div>
+  </div>
+</div>
+
+
+
 </body>
-</html
+</html>
