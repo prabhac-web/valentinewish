@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>A Little Surprise✨</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="text/javascript" src="script.js"></script>
+
+
+</head>
+
+<body>
+
+<!-- 🎵 MUSIC -->
+<audio id="loveMusic" loop>
+  <source src="images/vizhiyil_song.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="successSound" loop>
+  <source src="images/hug_song.mp3" type="audio/mpeg">
+</audio>
+
+<!-- WELCOME -->
+<div id="welcomePage" class="page visible">
+  <div class="pageHeading">
+   <h1 class="pageHeadingTxt">A Little Journey Through Our Love 💌</h1>
+  </div>
+  <div class="card">
+    <h1>Hey Dear ❤️</h1>
+    <p class="about">Let’s go back to where it all began…💕 </p>
+    <button style="margin-top: 20px;" onclick="start()">Relive</button>
+  </div>
+</div>
+
+<!-- QUESTION -->
+<div id="questionPage" class="page hidden">
+  <div class="card">
+    <h2 id="questionText"></h2>
+    <input id="answerInput" />
+    <button onclick="check()">Unlock</button>
+    <p id="errorMsg" class="msg"></p>
+    <p id="hintContainer" class="msg" style="color:#d81b60; font-style:italic;"></p>
+
+  </div>
+</div>
+
+<!-- HUG -->
+<div id="hugPage" class="page hidden">
+  <div class="hug-wrapper">
+   <img id="hugImage"
+     src="images/propose.gif"
+     alt="Teddy Hug">
+  </div>
+  <div class="hug-bottom">
+    <div id="hugText"></div>
+      <button id="hugBtn" onclick="next()">Next ➝</button>  </div>
+</div>
+
+<!-- FINAL -->
+<div id="finalPage" class="page hidden">
+  <div class="final-container">
+    <div class="final-image">
+      <img src="images/love.jpg" alt="Couple">
+    </div>
+<div class="final-letter">
+<p class="finalLeterTitle">My Forever Treasure,</p> 
+
+Being yours is the sweetest blessing of my life.<br>
+Every day you show me what true partnership means.<br>
+You listen to my thoughts, value my opinions,<br>
+and respect every decision I make.<br><br>
+
+You walk beside me — not ahead, not behind —<br>
+sharing every responsibility, every joy, every challenge.<br>
+The way you care for our son,<br>
+the way you love us both so gently and completely,<br>
+fills my heart with pride and gratitude. 💛<br><br>
+
+<!-- With you, I feel safe.<br>
+With you, I feel understood.<br>
+With you, I feel truly loved.<br><br> -->
+
+You are not just my husband…<br>
+you are my best friend, my strength, my forever home.<br><br>
+
+<b>Happy Valentine’s Day</b> to the man I fall for every day 💕
+</div>
+
+
+
+
+</body>
+</html>
