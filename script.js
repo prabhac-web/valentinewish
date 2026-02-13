@@ -32,6 +32,7 @@ const questions = [
 
 
 let i = 0;
+// let p =
 
 function show(id) {
   document.querySelectorAll('.page').forEach(p => {
@@ -55,6 +56,7 @@ function load() {
   hintContainer.innerText = "";
   attempts = 0;
   hugText.innerText="";
+  answerInput.focus();
 }
 
 function check() {
@@ -87,11 +89,10 @@ function check() {
 
 
 fadeInMusic(successSound, 2000);
-    showCaption();
+    // showCaption();
   }else {
   attempts++;
   errorMsg.innerText = "Hmm… think again 😅";
-console.log("attempt")
   if (attempts >= 2) {
     document.getElementById("hintContainer").classList.add("show");
     document.getElementById("hintContainer").innerText = questions[i].hint;
@@ -120,6 +121,7 @@ function typeText(element, text, speed = 150) {
   typing();
 }
 function next() {
+
   fadeOutMusic(document.getElementById("successSound"), 1500);
     // document.getElementById("successSound").pause();
   i++;
@@ -177,3 +179,22 @@ function fadeInMusic(audio, duration = 3000) {
     }
   }, interval);
 }
+document.addEventListener("DOMContentLoaded", function () {
+
+  const input = document.getElementById("answerInput");
+   
+  if (!input) return; // prevents null error
+  input.addEventListener("keydown", function (e) {
+
+    const questionPage = document.getElementById("questionPage");
+    if (
+      e.key === "Enter" &&
+      questionPage.classList.contains("visible")
+    ) {
+      e.preventDefault();
+      check(); // calls your existing function
+    }
+
+  });
+
+});
